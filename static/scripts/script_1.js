@@ -10,6 +10,7 @@ let body = document.querySelector("body");
 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const selectCafe = document.getElementById('cafes');
 let click_cafe = document.getElementsByClassName("cafe");
+let cafes = 0;
 
 z1.addEventListener("click", () => {
     c.style.display = "none";
@@ -72,13 +73,34 @@ function LoadMenu() {
     }
 }
 
-function LoadCafeMenuSelected() {
+function LoadMenuSelected() {
     c.style.display = "none";
     y.style.display = "none";
     k.style.display = "flex";
     k.style.animation = "opacity_2 1s ease-in-out"
     body.style.background = "linear-gradient(to top, rgb(255, 178, 12), rgb(221, 123, 11))";
     z4.style.display = "flex";
+    if (cafes == 0) {
+        console.log("Café 1 seleccionado");
+        selectCafe.value = "Cafe Normal"
+    } else if (cafes == 1) {
+        console.log("Café 2 seleccionado");
+        selectCafe.value = "Cafe Cortado"
+    } else if (cafes == 2) {
+        console.log("Café 3 seleccionado");
+        selectCafe.value = "Cafe Capuchino"
+    } else if (cafes == 3) {
+        console.log("Café 4 seleccionado");
+        selectCafe.value = "Cafe Capuchino Con Nutella"
+    } else if (cafes == 4) {
+        console.log("Café 5 seleccionado");
+        selectCafe.value = "Cafe Con Leche"
+    } else if (cafes == 5) {
+        console.log("Café 6 seleccionado");
+        selectCafe.value = "Té"
+    } else {
+        console.log("Ningún café seleccionado");
+    }
     if (esMobile) {
         console.log("Es un dispositivo móvil");
     } else {
@@ -86,26 +108,32 @@ function LoadCafeMenuSelected() {
     }
 }
 
-cafes[0].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected1() {
+    cafes = 0;
+    LoadMenuSelected();
+}
 
-cafes[1].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected2() {
+    cafes = 1;
+    LoadMenuSelected();
+}
 
-cafes[2].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected3() {
+    cafes = 2;
+    LoadMenuSelected();
+}
 
-cafes[3].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected4() {
+    cafes = 3;
+    LoadMenuSelected();
+}
 
-cafes[4].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected5() {
+    cafes = 4;
+    LoadMenuSelected();
+}
 
-cafes[5].addEventListener("click", () => {
-    LoadCafeMenuSelected();
-});
+function LoadMenuSelected6() {
+    cafes = 5;
+    LoadMenuSelected();
+}

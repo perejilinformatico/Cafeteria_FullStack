@@ -4,6 +4,10 @@ body {
     text-align: center;
     font-family: 'Geom', sans-serif;
     background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -21,4 +25,21 @@ button {
 button:hover {
     cursor: pointer;
     background-color: orange;
+}
+
+.btn_estado {
+    width: 10vh;
+    height: 10vh;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        width: 10vh;
+        height: 10vh;
+    }
 }

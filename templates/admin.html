@@ -9,11 +9,23 @@
 </head>
 
 <body>
+
     <h1>Admin</h1>
-    <p>Pedidos</p>
-    {%for pedido in pedidos%}
-    <p>{{ pedido }}</p>
-    {%endfor%}
+    <table border="1">
+        <tr>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Café</th>
+        </tr>
+
+        {% for pedido in pedidos %}
+        <tr class="list_fila">
+            <td>{{ pedido.fecha }}</td>
+            <td>{{ pedido.nombre }}</td>
+            <td>{{ pedido.cafe }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 
 </html>

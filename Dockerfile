@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+CMD gunicorn app:app --bind 0.0.0.0:$PORT

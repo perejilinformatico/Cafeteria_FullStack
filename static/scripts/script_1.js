@@ -10,7 +10,7 @@ let body = document.querySelector("body");
 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const selectCafe = document.getElementById('cafes');
 let click_cafe = document.getElementsByClassName("cafe");
-let cafes = 0;
+let cafes = null;
 
 z1.addEventListener("click", () => {
     c.style.display = "none";
@@ -74,6 +74,7 @@ function LoadMenu() {
 }
 
 function LoadMenuSelected() {
+    let img = document.getElementsByClassName("img_normal")[0];
     c.style.display = "none";
     y.style.display = "none";
     k.style.display = "flex";
@@ -82,22 +83,28 @@ function LoadMenuSelected() {
     z4.style.display = "flex";
     if (cafes == 0) {
         console.log("Café 1 seleccionado");
-        selectCafe.value = "Cafe Normal"
+        selectCafe.value = "Cafe Normal";
+        img.src = "static/jjj2.png";
     } else if (cafes == 1) {
         console.log("Café 2 seleccionado");
-        selectCafe.value = "Cafe Cortado"
+        selectCafe.value = "Cafe Cortado";
+        img.src = "static/jjj2.png";
     } else if (cafes == 2) {
         console.log("Café 3 seleccionado");
         selectCafe.value = "Cafe Capuchino"
+        img.src = "static/jjj2.png";
     } else if (cafes == 3) {
         console.log("Café 4 seleccionado");
-        selectCafe.value = "Cafe Capuchino Con Nutella"
+        selectCafe.value = "Cafe Capuchino Con Nutella";
+        img.src = "static/jjj2.png";
     } else if (cafes == 4) {
         console.log("Café 5 seleccionado");
-        selectCafe.value = "Cafe Con Leche"
+        selectCafe.value = "Cafe Con Leche";
+        img.src = "static/jjj2.png";
     } else if (cafes == 5) {
         console.log("Café 6 seleccionado");
-        selectCafe.value = "Té"
+        selectCafe.value = "Té";
+        img.src = "static/jjj2.png";
     } else {
         console.log("Ningún café seleccionado");
     }

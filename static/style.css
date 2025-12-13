@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+
+body {
+    background: linear-gradient(to top, rgb(165, 97, 42), rgb(165, 122, 42));
+    font-family: "Geom", serif;
+    color: white;
+    animation-name: app;
+    animation-duration: 1s;
+}
+
+.app {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 80vh;
+    min-height: 50vh;
+    max-height: 100vh;
+}
+
+.coffe_1 {
+    animation-name: coffee_1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 7.5rem;
+    z-index: 1;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    transition: all 1s ease-in-out;
+}
+
+h1 {
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.096);
+}
+
+.button_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30vh;
+}
+
+button {
+    background-color: transparent;
+    font-family: "Geom", serif;
+    border: 1px solid black;
+    border-radius: 5vh;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    transition: all 1s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    animation-name: button-press;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-press {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: black;
+        color: white;
+    }
+
+}
+
+@keyframes coffee_1 {
+    0% {
+        transform: translateY(-2px);
+
+    }
+
+    50% {
+        transform: translateY(3px);
+
+    }
+
+    100% {
+        transform: translateY(-2px);
+
+    }
+}
+
+@keyframes app {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        animation-name: fadeUp;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .app {
+        flex-direction: column;
+    }
+
+    button {
+        transform: translateY(20vh);
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='engine.css')}}">
+    <title>User Cafeteria de maxi y caro - Santiago cussit</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="div_l">
+            <h1>Cafeteria de maxi y caro</h1>
+        </div>
+        <div class="div_r">
+            <nav>
+                <a href="#" id="pedir_a">Pedir</a>
+                <a href="#" id="Informacion_a">Informacion</a>
+                <a href="#" id="Menu_a">Menu</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section_1">
+            <h1 class="title">Informacion</h1>
+            <div class="info_div">
+                <div class="div-r2">
+                    <h2>Es el sitio web oficial de la <br>cafeteria de maxi y caro</h2>
+                </div>
+                <div class="div-l2">
+                    <img src="{{ url_for('static', filename='MaxiYCaroGiblhi.png')}}" alt="Logo_maxi_y_caro"
+                        id="Logo_maxi_y_caro" class="img">
+                </div>
+            </div>
+        </section>
+        <section class="section_2">
+            <h1 class="title_cafes">Menu</h1>
+            <div class="items">
+                <div class="cafes_primera_fila">
+                    <div class="cafe">
+                        <h2>Cafe Normal</h2>
+                        <img src="{{ url_for('static', filename='asd.png')}}" class="img_cafe">
+                    </div>
+                    <div class="cafe">
+                        <h2>Cafe Cortado</h2>
+                        <img src="{{ url_for('static', filename='descarga (5).jpg')}}" class="img_cafe">
+                    </div>
+                    <div class="cafe">
+                        <h2>Cafe Capuchino</h2>
+                        <img src="{{ url_for('static', filename='descarga (4).jpg')}}" class="img_cafe">
+                    </div>
+                </div>
+                <div class="cafes_segunda_fila">
+                    <div class="cafe">
+                        <h2>Capuchino con nutella</h2>
+                        <img src="{{ url_for('static', filename='descarga (3).jpg')}}" class="img_cafe">
+                    </div>
+                    <div class="cafe">
+                        <h2>Cafe con leche</h2>
+                        <img src="{{ url_for('static', filename='Cafe_con_leche.jpg')}}" class="img_cafe">
+                    </div>
+                    <div class="cafe">
+                        <h2>Té</h2>
+                        <img src="{{ url_for('static', filename='Té.jpg')}}" class="img_cafe">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_3">
+            <h1>Pedir</h1>
+            <form action="/enviado" method="POST">
+                <label for="nombre" name="nombre">Nombre</label>
+                <input type="text" name="nombre" required>
+                <label for="Cafes" name="Cafes">Bebidas</label>
+                <select name="Cafes" id="cafes">
+                    <option id="cafe_normal" value="Cafe Normal" {% if cafe_seleccionado=='cafe_normal' %}selected{%
+                        endif %}>Cafe
+                        Normal</option>
+                    <option id="cafe_expreso" value="Cafe Expreso" {% if cafe_seleccionado=='cafe_expreso' %}selected{%
+                        endif %}>
+                        Cafe Expreso</option>
+                    <option id="cafe_capuchino" value="Cafe Capuchino" {% if cafe_seleccionado=='cafe_capuchino'
+                        %}selected{% endif %}>Cafe Capuchino</option>
+                    <option id="capuchino_con_nutella" value="Capuchino Con Nutella" {% if
+                        cafe_seleccionado=='capuchino_con_nutella' %}selected{% endif %}>Capuchino Con Nutella</option>
+                    <option id="cafe_con_leche" value="Cafe Con Leche" {% if cafe_seleccionado=='cafe_con_leche'
+                        %}selected{% endif %}>Cafe Con Leche</option>
+                    <option id="te" value="Té" {% if cafe_seleccionado=='te' %}selected{% endif %}>Té</option>
+                </select>
+                <button type="submit">Enviar</button>
+                <img src="{{ url_for('static', filename='jjj.png')}}" class="img_normal">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="footer_p">Creador: Santiago cussit</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/script_1.js')}}"></script>
+</body>
+
+</html>

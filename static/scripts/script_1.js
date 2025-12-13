@@ -9,6 +9,7 @@ let z4 = document.getElementsByTagName("footer")[0];
 let body = document.querySelector("body");
 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const selectCafe = document.getElementById('cafes');
+let click_cafe = document.getElementsByClassName("cafe");
 
 z1.addEventListener("click", () => {
     c.style.display = "none";
@@ -55,4 +56,56 @@ z3.addEventListener("click", () => {
 selectCafe.addEventListener("change", () => {
     let img = document.getElementsByClassName("img_normal")[0];
     img.src = "static/jjj2.png";
+});
+
+function LoadMenu() {
+    c.style.display = "none";
+    y.style.display = "none";
+    k.style.display = "flex";
+    k.style.animation = "opacity_2 1s ease-in-out"
+    body.style.background = "linear-gradient(to top, rgb(255, 178, 12), rgb(221, 123, 11))";
+    z4.style.display = "flex";
+    if (esMobile) {
+        console.log("Es un dispositivo móvil");
+    } else {
+        console.log("Es una computadora");
+    }
+}
+
+function LoadCafeMenuSelected() {
+    c.style.display = "none";
+    y.style.display = "none";
+    k.style.display = "flex";
+    k.style.animation = "opacity_2 1s ease-in-out"
+    body.style.background = "linear-gradient(to top, rgb(255, 178, 12), rgb(221, 123, 11))";
+    z4.style.display = "flex";
+    if (esMobile) {
+        console.log("Es un dispositivo móvil");
+    } else {
+        console.log("Es una computadora");
+    }
+}
+
+cafes[0].addEventListener("click", () => {
+    LoadCafeMenuSelected();
+});
+
+cafes[1].addEventListener("click", () => {
+    LoadCafeMenuSelected();
+});
+
+cafes[2].addEventListener("click", () => {
+    LoadCafeMenuSelected();
+});
+
+cafes[3].addEventListener("click", () => {
+    LoadCafeMenuSelected();
+});
+
+cafes[4].addEventListener("click", () => {
+    LoadCafeMenuSelected();
+});
+
+cafes[5].addEventListener("click", () => {
+    LoadCafeMenuSelected();
 });

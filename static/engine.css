@@ -23,6 +23,21 @@ body {
     animation: move 1s ease-in-out infinite;
 }
 
+#title_2_div {
+   padding: 3px;
+}
+
+.cafe_s {
+    padding: 0;
+}
+
+.div_cafes_pedidos {
+    margin: 10vh;
+    padding: 10vh;
+    position: relative;
+    top: 10vh;
+}
+
 * {
     margin: 0;
 }
@@ -114,7 +129,7 @@ a:hover {
 
 .img_normal {
     position: relative;
-    left: 29px;
+    left: calc(50% - 10vh);
     width: 20vh;
     height: 20vh;
     object-fit: contain;

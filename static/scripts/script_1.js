@@ -6,13 +6,16 @@ let z1 = document.getElementById("pedir_a");
 let z2 = document.getElementById("Informacion_a");
 let z3 = document.getElementById("Menu_a");
 let z4 = document.getElementsByTagName("footer")[0];
+let z5_cafes_pedidos = document.getElementsByClassName("section_4_cafes_pedidos")[0];
 let body = document.querySelector("body");
+let Contador_a = document.getElementById("Contador_a");
 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 const selectCafe = document.getElementById('cafes');
 let click_cafe = document.getElementsByClassName("cafe");
 let cafes = null;
 
 z1.addEventListener("click", () => {
+    z5_cafes_pedidos.style.display = "none";
     c.style.display = "none";
     y.style.display = "none";
     k.style.display = "flex";
@@ -29,6 +32,7 @@ z1.addEventListener("click", () => {
 z2.addEventListener("click", () => {
     c.style.display = "flex";
     c.style.animation = "opacity_2 1s ease-in-out"
+    z5_cafes_pedidos.style.display = "none";
     k.style.display = "none";
     y.style.display = "none";
     body.style.background = "linear-gradient(to top, rgb(255, 178, 12), rgb(221, 123, 11))";
@@ -42,6 +46,7 @@ z2.addEventListener("click", () => {
 
 z3.addEventListener("click", () => {
     c.style.display = "none";
+    z5_cafes_pedidos.style.display = "none";
     k.style.display = "none";
     y.style.display = "flex";
     y.style.animation = "opacity_2 1s ease-in-out"
@@ -53,13 +58,13 @@ z3.addEventListener("click", () => {
     }
 });
 
-
 selectCafe.addEventListener("change", () => {
     let img = document.getElementsByClassName("img_normal")[0];
     img.src = "static/jjj2.png";
 });
 
 function LoadMenu() {
+    z5_cafes_pedidos.style.display = "none";
     c.style.display = "none";
     y.style.display = "none";
     k.style.display = "flex";
@@ -77,6 +82,7 @@ function LoadMenuSelected() {
     let img = document.getElementsByClassName("img_normal")[0];
     c.style.display = "none";
     y.style.display = "none";
+    z5_cafes_pedidos.style.display = "none";
     k.style.display = "flex";
     k.style.animation = "opacity_2 1s ease-in-out"
     body.style.background = "linear-gradient(to top, rgb(255, 178, 12), rgb(221, 123, 11))";

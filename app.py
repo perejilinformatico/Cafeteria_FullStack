@@ -2,7 +2,7 @@ from datetime import datetime
 from flask import Flask, render_template, redirect, url_for, request
 
 app = Flask(__name__)
-
+Cafes_Puntos = 0
 pedidos = []
 
 @app.route('/')
@@ -11,7 +11,7 @@ def home():
 
 @app.route('/user')
 def user():
-    return render_template("user.html")
+    return render_template("user.html",  Cafes_Puntos=Cafes_Puntos)
 
 @app.route('/enviado', methods=['POST', 'GET'])
 def enviado():
@@ -25,6 +25,8 @@ def enviado():
             'cafe': cafe_seleccionado,
             'fecha': fecha,
         }
+        global Cafes_Puntos
+        Cafes_Puntos += 1
         pedidos.append(pedido)
         return redirect(url_for('cafe_enviado_user', nombre=nombre, cafe_seleccionado=cafe_seleccionado, fecha=fecha))
 

@@ -37,6 +37,17 @@ table {
     border-collapse: collapse;
 }
 
+.item {
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.item:active {
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 360px) {
     body {
         width: 10vh;

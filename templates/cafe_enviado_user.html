@@ -15,11 +15,20 @@
     <p>Tu Bebida llegará pronto!</p>
     <p>Fecha: {{ fecha }}</p>
     <button class="btn_regresar">Regresar</button>
-
+    <p>Si quieres puedes jugar a el minijuego mientras esperas!</p>
+    <h1 class="item">☕</h1>
+    <h3 id="h3_puntuacion">0</h3>
     <script>
-        let i = document.querySelector('.btn_regresar')
+        let i = document.querySelector('.btn_regresar');
+        let puntuacion = document.querySelector('#h3_puntuacion');
+        let cafe_item = document.querySelector('.item');
+        let score = 0;
         i.addEventListener('click', () => {
             window.location.href = '/user'
+        });
+        cafe_item.addEventListener('click', () => {
+            score += 1;
+            puntuacion.textContent = score;
         });
     </script>
 </body>

@@ -101,7 +101,7 @@ function LoadMenuSelected() {
         img.src = "static/jjj2.png";
     } else if (cafes == 3) {
         console.log("Café 4 seleccionado");
-        selectCafe.value = "Cafe Capuchino Con Nutella";
+        selectCafe.value = "9";
         img.src = "static/jjj2.png";
     } else if (cafes == 4) {
         console.log("Café 5 seleccionado");

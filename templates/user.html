@@ -40,7 +40,7 @@
             <div class="items">
                 <div class="cafes_primera_fila">
                     <div class="cafe" onclick="LoadMenuSelected1()">
-                        <h2>Cafe Normal</h2>
+                        <h2>Cafe Expreso</h2>
                         <img src="{{ url_for('static', filename='descarga (2).jpg')}}" class="img_cafe">
                     </div>
                     <div class="cafe" onclick="LoadMenuSelected2()">
@@ -75,9 +75,9 @@
                 <input type="text" name="nombre" required>
                 <label for="Cafes" name="Cafes">Bebidas</label>
                 <select name="Cafes" id="cafes">
-                    <option id="cafe_normal" value="Cafe Normal" {% if cafe_seleccionado=='cafe_normal' %}selected{%
+                    <option id="cafe_normal" value="Cafe Expreso" {% if cafe_seleccionado=='cafe_normal' %}selected{%
                         endif %}>Cafe
-                        Normal</option>
+                        Expreso</option>
                     <option id="cafe_capuchino" value="Cafe Cortado" {% if cafe_seleccionado=='cafe_capuchino'
                         %}selected{% endif %}>Cafe Cortado</option>
                     <option id="capuchino_con_nutella" value="Cafe Capuchino" {% if

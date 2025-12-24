@@ -89,7 +89,7 @@ function LoadMenuSelected() {
     z4.style.display = "flex";
     if (cafes == 0) {
         console.log("Café 1 seleccionado");
-        selectCafe.value = "Cafe Normal";
+        selectCafe.value = "Cafe Expreso";
         img.src = "static/jjj2.png";
     } else if (cafes == 1) {
         console.log("Café 2 seleccionado");

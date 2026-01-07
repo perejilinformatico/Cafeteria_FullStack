@@ -48,6 +48,11 @@ table {
     transform: scale(1.2);
 }
 
+tr {
+    padding: 10vh;
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 360px) {
     body {
         width: 10vh;

@@ -11,6 +11,8 @@
 <body>
 
     <h1>Admin</h1>
+    <button>Vaciar</button>
+    <button>Actualizar</button>
     <table border="1">
         <tr>
             <th>Fecha</th>
@@ -26,6 +28,18 @@
         </tr>
         {% endfor %}
     </table>
+    <script>
+        const i = document.getElementsByTagName("button")[0];
+        const j = document.getElementsByTagName("button")[1];
+
+        i.addEventListener("click", () => {
+          window.location.href = "/vaciar";
+        });
+
+        j.addEventListener("click", () => {
+          window.location.href = "/admin";
+        });
+    </script>
 </body>
 
 </html>

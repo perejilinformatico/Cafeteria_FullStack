@@ -28,7 +28,11 @@ body {
 }
 
 .cafe_s {
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    gap: 1vh;
 }
 
 .div_cafes_pedidos {
